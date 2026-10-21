@@ -1,0 +1,1186 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Moreira Palace | Hotel & Resort</title>
+    <meta name="description" content="Descubra o Moreira Palace, uma experiência de hospedagem, conforto, lazer e gastronomia.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --azul: #172d46;
+            --azul-claro: #29445f;
+            --dourado: #b99a65;
+            --creme: #f7f4ee;
+            --branco: #ffffff;
+            --texto: #343c45;
+            --cinza: #737b83;
+            --borda: #e5e0d7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 95px;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--creme);
+            color: var(--texto);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            min-height: 78px;
+            padding: 14px 6%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            border-bottom: 1px solid var(--borda);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: var(--azul);
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            font-weight: 700;
+            line-height: 1;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            display: block;
+            text-align: center;
+            font-family: 'DM Sans', sans-serif;
+            color: var(--dourado);
+            font-size: 9px;
+            letter-spacing: 5px;
+            margin-top: 6px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 23px;
+            font-size: 13px;
+        }
+
+        nav a {
+            transition: color .2s;
+        }
+
+        nav a:hover,
+        nav a.ativo {
+            color: var(--dourado);
+        }
+
+        .botao-topo {
+            background: var(--azul);
+            color: white;
+            padding: 13px 19px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            transition: .2s;
+        }
+
+        .botao-topo:hover,
+        .botao-azul:hover {
+            background: var(--azul-claro);
+        }
+
+        /* CAPA PRINCIPAL */
+
+        .hero {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            padding: 70px 8%;
+            color: white;
+            background:
+                linear-gradient(90deg, rgba(11, 27, 43, .90), rgba(11, 27, 43, .48), rgba(11, 27, 43, .12)),
+                url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2000&q=85')
+                center 55% / cover;
+        }
+
+        .hero-conteudo {
+            max-width: 660px;
+        }
+
+        .etiqueta {
+            color: #dfc18d;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin-bottom: 17px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero h1 {
+            font-size: clamp(43px, 6vw, 74px);
+            line-height: 1.08;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 510px;
+            color: #f1f1f1;
+            font-size: 14px;
+            line-height: 1.95;
+        }
+
+        .hero-botoes {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+        }
+
+        .botao-dourado,
+        .botao-azul,
+        .botao-contorno {
+            display: inline-block;
+            padding: 14px 21px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            transition: .2s;
+        }
+
+        .botao-dourado {
+            background: var(--dourado);
+            color: var(--azul);
+        }
+
+        .botao-dourado:hover {
+            background: #d4b981;
+            transform: translateY(-2px);
+        }
+
+        .botao-contorno {
+            border: 1px solid rgba(255,255,255,.75);
+            color: white;
+        }
+
+        .botao-contorno:hover {
+            background: white;
+            color: var(--azul);
+        }
+
+        /* DIFERENCIAIS RÁPIDOS */
+
+        .faixa-diferenciais {
+            background: white;
+            border-bottom: 1px solid var(--borda);
+        }
+
+        .faixa-grid {
+            max-width: 1200px;
+            margin: auto;
+            padding: 24px 30px;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .faixa-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .faixa-icone {
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: var(--creme);
+            color: var(--dourado);
+            display: grid;
+            place-items: center;
+            font-size: 19px;
+        }
+
+        .faixa-item strong {
+            display: block;
+            color: var(--azul);
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .faixa-item small {
+            color: var(--cinza);
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        /* PADRÃO DE SEÇÕES */
+
+        main {
+            max-width: 1320px;
+            margin: auto;
+            padding: 65px 35px;
+        }
+
+        .introducao {
+            max-width: 760px;
+            margin: 0 auto 35px;
+            text-align: center;
+        }
+
+        .introducao .etiqueta {
+            color: var(--dourado);
+            margin-bottom: 10px;
+        }
+
+        .introducao h2 {
+            color: var(--azul);
+            font-size: clamp(29px, 3vw, 40px);
+            line-height: 1.2;
+            margin-bottom: 13px;
+        }
+
+        .introducao p {
+            color: var(--cinza);
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        /* ACOMODAÇÕES */
+
+        .acomodacoes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--borda);
+            border-radius: 7px;
+            overflow: hidden;
+            transition: transform .25s, box-shadow .25s;
+            min-width: 0;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px #172d4612;
+        }
+
+        .card-foto {
+            height: 235px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-foto img {
+            height: 100%;
+            transition: transform .4s;
+        }
+
+        .card:hover .card-foto img {
+            transform: scale(1.04);
+        }
+
+        .tag {
+            position: absolute;
+            left: 14px;
+            top: 14px;
+            background: var(--dourado);
+            color: var(--azul);
+            padding: 7px 10px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 3px;
+        }
+
+        .card-conteudo {
+            padding: 21px;
+        }
+
+        .card-conteudo h3 {
+            color: var(--azul);
+            font-size: 24px;
+            margin-bottom: 9px;
+        }
+
+        .card-conteudo p {
+            color: var(--cinza);
+            font-size: 12px;
+            line-height: 1.85;
+            min-height: 66px;
+        }
+
+        .card-rodape {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid var(--borda);
+            margin-top: 16px;
+            padding-top: 15px;
+        }
+
+        .preco small {
+            display: block;
+            color: var(--cinza);
+            font-size: 10px;
+            margin-bottom: 4px;
+        }
+
+        .preco strong {
+            color: var(--azul);
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+        }
+
+        .preco strong span {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--cinza);
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+        .link-card {
+            color: var(--azul);
+            border-bottom: 1px solid var(--dourado);
+            font-size: 11px;
+            font-weight: 700;
+            padding-bottom: 4px;
+            white-space: nowrap;
+        }
+
+        .centralizar {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* EXPERIÊNCIA ALL INCLUSIVE */
+
+        .all-inclusive {
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            margin: 15px 0 65px;
+            background: var(--azul);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .all-inclusive-foto {
+            min-height: 430px;
+        }
+
+        .all-inclusive-foto img {
+            height: 100%;
+            min-height: 430px;
+        }
+
+        .all-inclusive-conteudo {
+            padding: 40px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .all-inclusive-conteudo h2 {
+            font-size: clamp(30px, 3vw, 42px);
+            line-height: 1.2;
+            margin-bottom: 17px;
+        }
+
+        .all-inclusive-conteudo p {
+            color: #dce3e9;
+            font-size: 13px;
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        .lista-inclusiva {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 4px 0 8px;
+        }
+
+        .lista-inclusiva li {
+            color: #f0f0f0;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .lista-inclusiva li::before {
+            content: "✦ ";
+            color: #d8b779;
+        }
+
+        /* GASTRONOMIA */
+
+        .gastronomia-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .gastronomia-card .card-foto {
+            height: 220px;
+        }
+
+        .gastronomia-card .card-conteudo p {
+            min-height: 0;
+            margin-bottom: 15px;
+        }
+
+        .texto-link {
+            color: var(--azul);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .texto-link span {
+            color: var(--dourado);
+            margin-left: 5px;
+        }
+
+        /* EXPERIÊNCIAS */
+
+        .experiencias-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .experiencia-card {
+            position: relative;
+            height: 300px;
+            border-radius: 7px;
+            overflow: hidden;
+            color: white;
+        }
+
+        .experiencia-card img {
+            height: 100%;
+            transition: transform .4s;
+        }
+
+        .experiencia-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .experiencia-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent 20%, rgba(12, 27, 43, .88));
+        }
+
+        .experiencia-texto {
+            position: absolute;
+            z-index: 1;
+            bottom: 22px;
+            left: 22px;
+            right: 22px;
+        }
+
+        .experiencia-texto h3 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .experiencia-texto p {
+            color: #ededed;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        /* CHAMADA PARA RESERVAS */
+
+        .reserva-banner {
+            padding: 65px 25px;
+            text-align: center;
+            color: white;
+            background:
+                linear-gradient(rgba(16, 37, 57, .91), rgba(16, 37, 57, .91)),
+                url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=85')
+                center / cover;
+            border-top: 3px solid var(--dourado);
+            border-bottom: 3px solid var(--dourado);
+        }
+
+        .reserva-banner h2 {
+            font-size: clamp(30px, 4vw, 43px);
+            margin-bottom: 13px;
+        }
+
+        .reserva-banner p {
+            max-width: 650px;
+            margin: auto;
+            color: #e1e7ed;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .reserva-banner .botao-dourado {
+            margin-top: 24px;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: #112438;
+            color: white;
+            padding: 34px 6%;
+        }
+
+        .footer-conteudo {
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        footer .logo {
+            color: white;
+            font-size: 22px;
+        }
+
+        footer p {
+            color: #d6dce3;
+            font-size: 11px;
+            line-height: 1.9;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 11px;
+        }
+
+        .footer-links a:hover {
+            color: #d6b77e;
+        }
+
+        .voltar {
+            color: #d6b77e;
+            font-size: 11px;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 1000px) {
+            header {
+                padding: 15px 4%;
+                flex-wrap: wrap;
+            }
+
+            nav {
+                gap: 14px;
+            }
+
+            .acomodacoes-grid,
+            .gastronomia-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .faixa-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .all-inclusive-conteudo {
+                padding: 28px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            header {
+                position: relative;
+                gap: 15px;
+            }
+
+            nav {
+                order: 3;
+                width: 100%;
+                justify-content: flex-start;
+                gap: 13px 17px;
+                font-size: 12px;
+            }
+
+            .botao-topo {
+                padding: 11px 12px;
+                font-size: 11px;
+            }
+
+            .hero {
+                min-height: 460px;
+                padding: 50px 7%;
+                background-position: 58% center;
+            }
+
+            .hero h1 {
+                font-size: 46px;
+            }
+
+            .faixa-grid {
+                padding: 22px 18px;
+                gap: 18px 12px;
+            }
+
+            .faixa-item {
+                align-items: flex-start;
+            }
+
+            main {
+                padding: 45px 17px;
+            }
+
+            .acomodacoes-grid,
+            .gastronomia-grid,
+            .experiencias-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card-foto {
+                height: 250px;
+            }
+
+            .card-conteudo p {
+                min-height: 0;
+            }
+
+            .all-inclusive {
+                grid-template-columns: 1fr;
+                margin: 10px 0 45px;
+            }
+
+            .all-inclusive-foto,
+            .all-inclusive-foto img {
+                height: 270px;
+                min-height: 270px;
+            }
+
+            .all-inclusive-conteudo {
+                padding: 28px 23px;
+            }
+
+            .experiencia-card {
+                height: 270px;
+            }
+
+            .footer-conteudo {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .logo {
+                font-size: 21px;
+            }
+
+            .hero h1 {
+                font-size: 39px;
+            }
+
+            .faixa-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lista-inclusiva {
+                grid-template-columns: 1fr;
+            }
+
+            .card-rodape {
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body id="topo">
+
+<header>
+    <a href="index.html" class="logo">
+        MOREIRA
+        <span>PALACE</span>
+    </a>
+
+    <nav>
+        <a href="index.html" class="ativo">Início</a>
+        <a href="acomodacoes.html">Acomodações</a>
+        <a href="gastronomia.html">Gastronomia</a>
+        <a href="reservas.html">Reservas</a>
+        <a href="pagamentos.html">Pagamentos</a>
+    </nav>
+
+    <a href="reservas.html" class="botao-topo">Reservar agora ↗</a>
+</header>
+
+<!-- CAPA -->
+
+<section class="hero">
+    <div class="hero-conteudo">
+        <div class="etiqueta">Hotel & Resort · Uma experiência especial</div>
+
+        <h1>Um lugar para viver momentos inesquecíveis.</h1>
+
+        <p>
+            Bem-vindo ao Moreira Palace. Um conceito de hospedagem que
+            combina conforto, elegância, gastronomia e lazer para transformar
+            sua estadia em uma experiência memorável.
+        </p>
+
+        <div class="hero-botoes">
+            <a href="reservas.html" class="botao-dourado">Planejar minha estadia</a>
+            <a href="acomodacoes.html" class="botao-contorno">Conhecer acomodações</a>
+        </div>
+    </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+
+<section class="faixa-diferenciais">
+    <div class="faixa-grid">
+        <div class="faixa-item">
+            <div class="faixa-icone">✧</div>
+            <div>
+                <strong>Conforto e elegância</strong>
+                <small>Acomodações para diferentes estilos</small>
+            </div>
+        </div>
+
+        <div class="faixa-item">
+            <div class="faixa-icone">♨</div>
+            <div>
+                <strong>Gastronomia variada</strong>
+                <small>Sabores para diferentes momentos</small>
+            </div>
+        </div>
+
+        <div class="faixa-item">
+            <div class="faixa-icone">◇</div>
+            <div>
+                <strong>Lazer e descanso</strong>
+                <small>Espaços para aproveitar sua estadia</small>
+            </div>
+        </div>
+
+        <div class="faixa-item">
+            <div class="faixa-icone">✦</div>
+            <div>
+                <strong>Experiência completa</strong>
+                <small>Uma proposta de resort all inclusive</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main>
+
+    <!-- ACOMODAÇÕES EM DESTAQUE -->
+
+    <section>
+        <div class="introducao">
+            <div class="etiqueta">Sua hospedagem</div>
+            <h2>Acomodações que combinam com você</h2>
+            <p>
+                Escolha entre quartos acolhedores e suítes exclusivas.
+                Consulte as categorias e os valores ilustrativos antes de
+                planejar sua próxima experiência.
+            </p>
+        </div>
+
+        <div class="acomodacoes-grid">
+
+            <article class="card">
+                <div class="card-foto">
+                    <img
+                        src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85"
+                        alt="Quarto Standard do Moreira Palace"
+                        loading="lazy">
+                    <span class="tag">Conforto</span>
+                </div>
+                <div class="card-conteudo">
+                    <h3>Quarto Standard</h3>
+                    <p>
+                        Um ambiente acolhedor e funcional para descansar
+                        com praticidade e tranquilidade.
+                    </p>
+                    <div class="card-rodape">
+                        <div class="preco">
+                            <small>Diária ilustrativa a partir de</small>
+                            <strong>R$ 350 <span>/ noite</span></strong>
+                        </div>
+                        <a href="acomodacoes.html#standard" class="link-card">Ver quarto ↗</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-foto">
+                    <img
+                        src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=85"
+                        alt="Quarto Deluxe com decoração elegante"
+                        loading="lazy">
+                    <span class="tag">Mais espaço</span>
+                </div>
+                <div class="card-conteudo">
+                    <h3>Quarto Deluxe</h3>
+                    <p>
+                        Mais espaço, decoração sofisticada e uma atmosfera
+                        perfeita para uma estadia diferenciada.
+                    </p>
+                    <div class="card-rodape">
+                        <div class="preco">
+                            <small>Diária ilustrativa a partir de</small>
+                            <strong>R$ 480 <span>/ noite</span></strong>
+                        </div>
+                        <a href="acomodacoes.html#deluxe" class="link-card">Ver quarto ↗</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-foto">
+                    <img
+                        src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1000&q=85"
+                        alt="Suíte Palace premium"
+                        loading="lazy">
+                    <span class="tag">Premium</span>
+                </div>
+                <div class="card-conteudo">
+                    <h3>Suíte Palace</h3>
+                    <p>
+                        Uma acomodação sofisticada para quem procura
+                        mais amplitude e uma experiência especial.
+                    </p>
+                    <div class="card-rodape">
+                        <div class="preco">
+                            <small>Diária ilustrativa a partir de</small>
+                            <strong>R$ 650 <span>/ noite</span></strong>
+                        </div>
+                        <a href="acomodacoes.html#suite" class="link-card">Ver suíte ↗</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="centralizar">
+            <a href="acomodacoes.html" class="botao-azul">Ver todas as acomodações</a>
+        </div>
+    </section>
+
+    <!-- ALL INCLUSIVE -->
+
+    <section class="all-inclusive">
+        <div class="all-inclusive-foto">
+            <img
+                src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=85"
+                alt="Piscina e área de lazer de resort"
+                loading="lazy">
+        </div>
+
+        <div class="all-inclusive-conteudo">
+            <div class="etiqueta">Muito além de se hospedar</div>
+            <h2>Uma experiência all inclusive.</h2>
+
+            <p>
+                No conceito do Moreira Palace, cada detalhe faz parte da
+                experiência: hospedagem, refeições e momentos de lazer
+                em um só lugar.
+            </p>
+
+            <ul class="lista-inclusiva">
+                <li>Experiências gastronômicas</li>
+                <li>Acomodações confortáveis</li>
+                <li>Momentos de lazer</li>
+                <li>Ambientes de descanso</li>
+                <li>Opções para famílias</li>
+                <li>Experiências para casais</li>
+            </ul>
+
+            <div>
+                <a href="gastronomia.html" class="botao-dourado">Conhecer gastronomia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GASTRONOMIA -->
+
+    <section>
+        <div class="introducao">
+            <div class="etiqueta">Uma viagem de sabores</div>
+            <h2>Gastronomia para todos os momentos</h2>
+            <p>
+                Do café da manhã ao jantar, descubra as opções gastronômicas
+                planejadas para fazer parte da experiência Moreira Palace.
+            </p>
+        </div>
+
+        <div class="gastronomia-grid">
+
+            <article class="card gastronomia-card">
+                <div class="card-foto">
+                    <img
+                        src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=1000&q=85"
+                        alt="Café da manhã servido com frutas, pães e acompanhamentos"
+                        loading="lazy">
+                </div>
+                <div class="card-conteudo">
+                    <h3>Café da manhã</h3>
+                    <p>
+                        Comece o dia com uma seleção de sabores,
+                        bebidas, frutas e opções para diferentes gostos.
+                    </p>
+                    <a href="gastronomia.html#cafe-da-manha" class="texto-link">
+                        Explorar opções <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="card gastronomia-card">
+                <div class="card-foto">
+                    <img
+                        src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85"
+                        alt="Refeição preparada com ingredientes frescos"
+                        loading="lazy">
+                </div>
+                <div class="card-conteudo">
+                    <h3>Almoço e jantar</h3>
+                    <p>
+                        Conheça uma proposta variada de refeições para
+                        aproveitar diferentes momentos da estadia.
+                    </p>
+                    <a href="gastronomia.html#almoco" class="texto-link">
+                        Ver cardápio <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="card gastronomia-card">
+                <div class="card-foto">
+                    <img
+                        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85"
+                        alt="Bolo de chocolate decorado para sobremesa"
+                        loading="lazy">
+                </div>
+                <div class="card-conteudo">
+                    <h3>Sobremesas e doces</h3>
+                    <p>
+                        Uma seleção especial de doces e sobremesas,
+                        incluindo a proposta de confeitaria Cá Delícias.
+                    </p>
+                    <a href="gastronomia.html#sobremesas" class="texto-link">
+                        Descobrir doces <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="centralizar">
+            <a href="gastronomia.html" class="botao-azul">Conhecer toda a gastronomia</a>
+        </div>
+    </section>
+
+    <!-- EXPERIÊNCIAS -->
+
+    <section style="margin-top: 70px;">
+        <div class="introducao">
+            <div class="etiqueta">Seu tempo, do seu jeito</div>
+            <h2>Crie momentos especiais</h2>
+            <p>
+                Seja em uma viagem romântica, em família ou em uma ocasião
+                especial, o Moreira Palace foi pensado para diferentes formas
+                de aproveitar a hospedagem.
+            </p>
+        </div>
+
+        <div class="experiencias-grid">
+
+            <article class="experiencia-card">
+                <img
+                    src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1000&q=85"
+                    alt="Piscina de resort para momentos de lazer"
+                    loading="lazy">
+                <div class="experiencia-texto">
+                    <h3>Lazer e descanso</h3>
+                    <p>Um convite para desacelerar e aproveitar cada momento.</p>
+                </div>
+            </article>
+
+            <article class="experiencia-card">
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85"
+                    alt="Ambiente de restaurante elegante"
+                    loading="lazy">
+                <div class="experiencia-texto">
+                    <h3>Momentos à mesa</h3>
+                    <p>Reúna pessoas especiais em torno de boas experiências.</p>
+                </div>
+            </article>
+
+            <article class="experiencia-card">
+                <img
+                    src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1000&q=85"
+                    alt="Ambiente interno elegante e aconchegante"
+                    loading="lazy">
+                <div class="experiencia-texto">
+                    <h3>Conforto e elegância</h3>
+                    <p>Ambientes preparados para tornar a estadia memorável.</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- RESERVAS -->
+
+<section class="reserva-banner">
+    <div class="etiqueta">Sua próxima experiência começa aqui</div>
+    <h2>O Moreira Palace espera por você.</h2>
+    <p>
+        Escolha sua acomodação, planeje sua estadia e descubra tudo o que
+        o nosso conceito de hotel e resort tem a oferecer.
+    </p>
+    <a href="reservas.html" class="botao-dourado">Planejar minha reserva ↗</a>
+</section>
+
+<!-- RODAPÉ -->
+
+<footer>
+    <div class="footer-conteudo">
+        <a href="index.html" class="logo">
+            MOREIRA
+            <span>PALACE</span>
+        </a>
+
+        <p>
+            Elegância em cada detalhe.<br>
+            © 2026 Moreira Palace · Projeto demonstrativo.
+        </p>
+
+        <div class="footer-links">
+            <a href="acomodacoes.html">Acomodações</a>
+            <a href="gastronomia.html">Gastronomia</a>
+            <a href="reservas.html">Reservas</a>
+            <a href="pagamentos.html">Pagamentos</a>
+        </div>
+
+        <a href="#topo" class="voltar">VOLTAR AO TOPO ↑</a>
+    </div>
+</footer>
+
+<!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+<a
+  href="https://wa.me/5551999999999?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Moreira%20Palace."
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Fale com o Moreira Palace pelo WhatsApp"
+  title="Fale conosco pelo WhatsApp"
+>
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path fill="currentColor" d="M16.02 3C8.85 3 3.02 8.81 3.02 15.97c0 2.29.6 4.53 1.74 6.5L3 29l6.7-1.75a13 13 0 0 0 6.31 1.61h.01c7.17 0 13-5.82 13-12.98A12.92 12.92 0 0 0 25.2 6.7 12.91 12.91 0 0 0 16.02 3Zm0 23.66h-.01a10.8 10.8 0 0 1-5.5-1.5l-.39-.23-3.98 1.04 1.06-3.87-.25-.4a10.73 10.73 0 0 1-1.65-5.73c0-5.93 4.83-10.76 10.77-10.76a10.7 10.7 0 0 1 7.61 3.15 10.7 10.7 0 0 1 3.15 7.61c0 5.93-4.83 10.76-10.81 10.76Zm5.9-8.06c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.22.32-.84 1.05-1.03 1.27-.19.21-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.59-.95-.84-1.59-1.88-1.78-2.2-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.1-1.14 2.67s1.17 3.09 1.33 3.3c.16.22 2.3 3.51 5.58 4.92.78.34 1.39.55 1.86.7.78.25 1.49.22 2.05.13.63-.1 1.9-.78 2.17-1.54.27-.76.27-1.41.19-1.54-.08-.14-.29-.22-.61-.38Z"/>
+  </svg>
+  <span>Fale conosco</span>
+</a>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 19px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.22);
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  }
+
+  .whatsapp-float svg {
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 600px) {
+    .whatsapp-float {
+      right: 16px;
+      bottom: 16px;
+      padding: 13px;
+    }
+
+    .whatsapp-float span {
+      display: none;
+    }
+
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+</style>
+
+</body>
+</html>
